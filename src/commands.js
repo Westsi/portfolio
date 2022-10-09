@@ -30,17 +30,22 @@ const contact = [
 ]
 
 const skills = [
-    {text: "Python", icon: "", yrsExp: 4, confidence: 7},
-    {text: "Javascript", icon: "", yrsExp: 2, confidence: 4},
-    {text: "Java", icon: "", yrsExp: 1, confidence: 5},
-    {text: "Golang", icon: "", yrsExp: 1, confidence: 4},
-    {text: "React", icon: "", yrsExp: 2, confidence: 7},
-    {text: "Flask/Flask-RESTful", icon: "", yrsExp: 2, confidence: 6},
-    {text: "Gin for Golang", icon: "", yrsExp: 1, confidence: 3},
-    {text: "Postman", icon: "", yrsExp: 3, confidence: 8},
-    {text: "Git", icon: "", yrsExp: 3, confidence: 6},
-    {text: "Video Editing", icon: "", yrsExp: 3, confidence: 5},
-    {text: "C", icon: "", yrsExp: 1, confidence: 2},
+    {text: "Python", icon: "", yrsExp: "4", confidence: 7},
+    {text: "Javascript", icon: "", yrsExp: "2", confidence: 4},
+    {text: "Java", icon: "", yrsExp: "1", confidence: 5},
+    {text: "Golang", icon: "", yrsExp: "1", confidence: 4},
+    {text: "React", icon: "", yrsExp: "2", confidence: 7},
+    {text: "Flask/Flask-RESTful", icon: "", yrsExp: "2", confidence: 6},
+    {text: "Gin for Golang", icon: "", yrsExp: "1", confidence: 3},
+    {text: "Postman", icon: "", yrsExp: "3", confidence: 8},
+    {text: "Git", icon: "", yrsExp: "3", confidence: 6},
+    {text: "VSCode", icon: "", yrsExp: "2", confidence: 8},
+    {text: "Pycharm/IntelliJ", icon: "", yrsExp: "3", confidence: 8},
+    {text: "Repl.it", icon: "", yrsExp: "5", confidence: 9},
+    {text: "Video Editing", icon: "", yrsExp: "3", confidence: 5},
+    {text: "C", icon: "", yrsExp: "1", confidence: 2},
+    {text: "Spigot Development for Minecraft", icon: "", yrsExp: "1", confidence: 4},
+    {text: "Fabric Minecraft Mods", icon: "", yrsExp: ">1", confidence: 2},
 ]
 
 

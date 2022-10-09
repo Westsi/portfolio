@@ -45,7 +45,7 @@ const skills = [
     {text: "Video Editing", icon: "", yrsExp: "3", confidence: 5},
     {text: "C", icon: "", yrsExp: "1", confidence: 2},
     {text: "Spigot Development for Minecraft", icon: "", yrsExp: "1", confidence: 4},
-    {text: "Fabric Minecraft Mods", icon: "", yrsExp: ">1", confidence: 2},
+    {text: "Fabric Minecraft Mods", icon: "", yrsExp: "<1", confidence: 2},
 ]
 
 

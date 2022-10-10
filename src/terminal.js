@@ -6,7 +6,6 @@ const Terminal = () => {
     return(
         <div className="app">
             <h1>{prompt}</h1>
-            <p>Hello!</p>
         </div>
     )
 }

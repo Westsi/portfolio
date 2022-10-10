@@ -1,11 +1,11 @@
 import Terminal from "./terminal";
-import Art from "./art";
+import Art2 from "./art2";
 
 function App() {
   return (
     <div className="App">
       <Terminal />
-      <Art />
+      <Art2 />
     </div>
   );
 }

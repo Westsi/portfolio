@@ -4,8 +4,10 @@ const Terminal = () => {
     const prompt = "WS C:\\Users\\visitor>"
     
     return(
-        <h1>{prompt}</h1>
-        <p>Hello!</p>
+        <div className="app">
+            <h1>{prompt}</h1>
+            <p>Hello!</p>
+        </div>
     )
 }
 

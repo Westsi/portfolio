@@ -5,6 +5,7 @@ const Terminal = () => {
     
     return(
         <h1>{prompt}</h1>
+        <p>Hello!</p>
     )
 }
 

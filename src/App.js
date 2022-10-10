@@ -1,5 +1,5 @@
 import Terminal from "./terminal";
-import art from "./art";
+import Art from "./art";
 
 function App() {
   return (

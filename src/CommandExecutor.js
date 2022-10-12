@@ -23,7 +23,7 @@ const CommandExecutor = (props) => {
     const runCommand = (command) => {
         const commands = ["help", "about", "contact", "skills", "projects"]
         if (commands.includes(command)) {
-            
+
             if (command == "help") {
                 updateLines("command\t\tdescription")
                 for (const com in help) {
@@ -37,7 +37,10 @@ const CommandExecutor = (props) => {
             updateLines("invalid command!")
         }
     }
-
+    /*
+    TODO
+    make lines an arr of objects so can have classNames and stuff
+    */
     return (
         <>
             {lines.map(line => <h2>{line}</h2>)}

@@ -20,3 +20,4 @@ const Terminal = () => {
 }
 
 export default Terminal;
+export {updateLines};

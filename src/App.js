@@ -9,7 +9,7 @@ function useForceUpdate(){
 }
 
 function App() {
-	const [lines, setLines] = useState(["hello"]);
+	const [lines, setLines] = useState([]);
 
 	const forceUpdate = useForceUpdate();
 	

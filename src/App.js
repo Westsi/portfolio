@@ -1,5 +1,6 @@
 import Terminal, { updateLines } from "./terminal";
 import Art2 from "./art2";
+import React, { useState } from "react";
 
 function App() {
 

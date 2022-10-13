@@ -1,0 +1,10 @@
+@import "./fonts.css";
+
+.promptCom {
+    color: yellow;
+}
+
+
+.output {
+    font-family: 'JetBrains Mono', Courier, monospace;
+}

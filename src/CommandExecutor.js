@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { help, about, contact, skills, projects } from "./commands";
 import Terminal from "./terminal";
+import "./terminal.css";
 
 function useForceUpdate() {
     const [value, setValue] = useState(0);
@@ -45,7 +46,7 @@ const CommandExecutor = (props) => {
                 for (const skill in skills) {
                     console.log(skill);
                     const Yr_s = "year"
-                    if (skills[skill].yrsExp != 1){
+                    if (skills[skill].yrsExp != 1) {
                         Yr_s = "years"
                     }
                     updateLines(skills[skill].text + ": I have " + skills[skill].yrsExp + " " + Yr_s + " of experience with this tool.", "skillHeader");
@@ -61,8 +62,10 @@ const CommandExecutor = (props) => {
     }
     return (
         <>
-            {lines.map(line => <h2 className={line.className}>{line.line}</h2>)}
-            <Terminal onCommand={(command) => { runCommand(command) }} />
+            <div className="output">
+                {lines.map(line => <h2 className={line.className}>{line.line}</h2>)}
+                <Terminal onCommand={(command) => { runCommand(command) }} />
+            </div>
         </>
     )
 }

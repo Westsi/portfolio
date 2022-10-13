@@ -30,8 +30,25 @@ const CommandExecutor = (props) => {
             if (command == "help") {
                 updateLines("command\t\tdescription")
                 for (const com in help) {
-                    console.log(help[com]);
-                    updateLines(help[com].command + " \t \t " + help[com].description, "comRes");
+                    updateLines(help[com].command + " \t \t " + help[com].description, "helpRes");
+                }
+            }
+
+            if (command == "contact"){
+                for (const obj in contact){
+                    updateLines(obj.text + obj.link, "contactRes")
+                }
+            }
+
+            if (command == "skills"){
+                for (const skill in skills){
+                    updateLines(skill.text + ": I have " + skill.yrsExp + " years of experience with this tool.", "skillHeader")
+                    updateLines("Confidence:", "confidenceHeader")
+                    switch (skill.confidence){
+                        case 1:
+                            updateLines((skill.confidence*10).toString() + "%")
+                            
+                    }
                 }
             }
 

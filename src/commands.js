@@ -30,22 +30,22 @@ const contact = [
 ]
 
 const skills = [
-    {text: "Python", icon: "", yrsExp: "4", confidence: 7},
-    {text: "Javascript", icon: "", yrsExp: "2", confidence: 4},
-    {text: "Java", icon: "", yrsExp: "1", confidence: 5},
-    {text: "Golang", icon: "", yrsExp: "1", confidence: 4},
-    {text: "React", icon: "", yrsExp: "2", confidence: 7},
-    {text: "Flask/Flask-RESTful", icon: "", yrsExp: "2", confidence: 6},
-    {text: "Gin for Golang", icon: "", yrsExp: "1", confidence: 3},
-    {text: "Postman", icon: "", yrsExp: "3", confidence: 8},
-    {text: "Git", icon: "", yrsExp: "3", confidence: 6},
-    {text: "VSCode", icon: "", yrsExp: "2", confidence: 8},
-    {text: "Pycharm/IntelliJ", icon: "", yrsExp: "3", confidence: 8},
-    {text: "Repl.it", icon: "", yrsExp: "5", confidence: 9},
-    {text: "Video Editing", icon: "", yrsExp: "3", confidence: 5},
-    {text: "C", icon: "", yrsExp: "1", confidence: 2},
-    {text: "Spigot Development for Minecraft", icon: "", yrsExp: "1", confidence: 4},
-    {text: "Fabric Minecraft Mods", icon: "", yrsExp: "<1", confidence: 2},
+    {text: "Python", icon: "", yrsExp: "4", confidence: 7, tfl: "language"},
+    {text: "Javascript", icon: "", yrsExp: "2", confidence: 4, tfl: "language"},
+    {text: "Java", icon: "", yrsExp: "1", confidence: 3, tfl: "language"},
+    {text: "Golang", icon: "", yrsExp: "1", confidence: 3, tfl: "language"},
+    {text: "React", icon: "", yrsExp: "2", confidence: 7, tfl: "framework"},
+    {text: "Flask/Flask-RESTful", icon: "", yrsExp: "2", confidence: 6, tfl: "framework"},
+    {text: "Gin-Gonic", icon: "", yrsExp: "1", confidence: 3, tfl: "framework"},
+    {text: "Postman", icon: "", yrsExp: "3", confidence: 8, tfl: "tool"},
+    {text: "Git", icon: "", yrsExp: "3", confidence: 6, tfl: "tool"},
+    {text: "VSCode", icon: "", yrsExp: "2", confidence: 8, tfl: "IDE"},
+    {text: "Pycharm/IntelliJ", icon: "", yrsExp: "3", confidence: 8, tfl: "IDE"},
+    {text: "Repl.it", icon: "", yrsExp: "5", confidence: 9, tfl: "online IDE"},
+    {text: "Wondershare Filmora Editing Software", icon: "", yrsExp: "3", confidence: 8, tfl: "tool"},
+    {text: "C", icon: "", yrsExp: "1", confidence: 2, tfl: "language"},
+    {text: "Spigot Development for Minecraft", icon: "", yrsExp: "1", confidence: 4, tfl: "framework"},
+    {text: "Fabric Minecraft Mods", icon: "", yrsExp: "<1", confidence: 2, tfl: "framework"},
 ]
 
 

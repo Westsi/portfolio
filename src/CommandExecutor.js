@@ -31,7 +31,7 @@ const CommandExecutor = (props) => {
                 updateLines("command\t\tdescription")
                 for (const com in help) {
                     console.log(help[com]);
-                    updateLines(help[com].command + "\t\t" + help[com].description, "comRes");
+                    updateLines(help[com].command + " \t \t " + help[com].description, "comRes");
                 }
             }
 

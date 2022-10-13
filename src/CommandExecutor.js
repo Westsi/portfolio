@@ -26,12 +26,12 @@ const CommandExecutor = (props) => {
     const runCommand = (command) => {
         const commands = ["help", "about", "contact", "skills", "projects"]
         if (commands.includes(command)) {
-            updateLines(prompt + command, promptCom);
+            updateLines(prompt + command, "promptCom");
             if (command == "help") {
                 updateLines("command\t\tdescription")
                 for (const com in help) {
                     console.log(help[com]);
-                    updateLines(help[com].command + "\t\t" + help[com].description, comRes);
+                    updateLines(help[com].command + "\t\t" + help[com].description, "comRes");
                 }
             }
 

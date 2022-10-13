@@ -13,7 +13,7 @@ const CommandExecutor = (props) => {
 
     const updateLines = (line, className) => {
         var lines2 = lines;
-        var lObject = {line: line, className: className};
+        var lObject = { line: line, className: className };
         lines2.push(lObject);
         setLines(lines2);
         console.log("lines updated!");
@@ -34,39 +34,33 @@ const CommandExecutor = (props) => {
                 }
             }
 
-            if (command == "contact"){
-                for (const obj in contact){
-                    updateLines(obj.text + obj.link, "contactRes")
+            if (command == "contact") {
+                for (const obj in contact) {
+                    updateLines(obj.text + obj.link, "contactRes");
                 }
             }
 
-            if (command == "skills"){
-                for (const skill in skills){
-                    updateLines(skill.text + ": I have " + skill.yrsExp + " years of experience with this tool.", "skillHeader")
-                    updateLines("Confidence:", "confidenceHeader")
-                    switch (skill.confidence){
-                        case 1:
-                            updateLines((skill.confidence*10).toString() + "%")
-                            
-                    }
+            if (command == "skills") {
+                updateLines(skills[0], "test");
+                updateLines(skills[0].text, "test")
+                for (const skill in skills) {
+                    updateLines(skill.text + ": I have " + skill.yrsExp + " years of experience with this tool.", "skillHeader");
+                    updateLines("Confidence:", "confidenceHeader");
+                    updateLines((skill.confidence * 10).toString() + "%");
                 }
-            }
 
+            }
+            else {
+                updateLines("invalid command!")
+            }
         }
-        else {
-            updateLines("invalid command!")
-        }
+        return (
+            <>
+                {lines.map(line => <h2 className={line.className}>{line.line}</h2>)}
+                <Terminal onCommand={(command) => { runCommand(command) }} />
+            </>
+        )
     }
-    /*
-    TODO
-    make lines an arr of objects so can have classNames and stuff
-    */
-    return (
-        <>
-            {lines.map(line => <h2 className={line.className}>{line.line}</h2>)}
-            <Terminal onCommand={(command) => { runCommand(command) }} />
-        </>
-    )
 }
 
 export default CommandExecutor

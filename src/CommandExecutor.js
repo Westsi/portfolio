@@ -23,7 +23,7 @@ const CommandExecutor = (props) => {
     const runCommand = (command) => {
         const commands = ["help", "about", "contact", "skills", "projects"]
         if (commands.includes(command)) {
-
+            updateLines(prompt + command);
             if (command == "help") {
                 updateLines("command\t\tdescription")
                 for (const com in help) {

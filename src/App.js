@@ -1,5 +1,6 @@
 import CommandExecutor from "./CommandExecutor";
 import React from "react";
+import "./app.css"
 
 
 function App() {

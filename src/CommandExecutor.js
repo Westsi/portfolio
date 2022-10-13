@@ -12,12 +12,22 @@ const CommandExecutor = (props) => {
 	const [lines, setLines] = useState([]);
 	const forceUpdate = useForceUpdate();
 
-	const updateLines = (line, className) => {
-		var lines2 = lines;
+
+    const pushLines = (line, className) => {
+        var lines2 = lines;
 		var lObject = { line: line, className: className };
 		lines2.push(lObject);
 		setLines(lines2);
 		forceUpdate();
+    }
+	const updateLines = (line, className) => {
+        if (line.length > 45){
+            var prevC = 0;
+            for (var i = 45; i < (line.length); i += 45)
+            pushLines(line.substring(prevC, i))
+            prevC = i;
+        }
+		
 	}
 
 	const prompt = "WS C:\\Users\\visitor>";

@@ -19,6 +19,8 @@ const CommandExecutor = (props) => {
         forceUpdate();
     }
 
+    const prompt = "WS C:\\Users\\visitor>";
+
 
     const runCommand = (command) => {
         const commands = ["help", "about", "contact", "skills", "projects"]

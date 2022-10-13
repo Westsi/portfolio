@@ -60,6 +60,25 @@ const CommandExecutor = (props) => {
                 }
 
             }
+
+            else if (command === "about"){
+                for (const line in about) {
+                    updateLines(about[line], "aboutLine")
+                }
+            }
+
+            else if (command === "projects") {
+                for (const p in projects){
+                    const project = projects[p];
+                    updateLines(project.name + " - " + project.description, "projName");
+                    updateLines("This was written in:", "writtenIn");
+                    for (const w in project.writtenIn){
+                        updateLines("-" + project.writtenIn[w], "writtenInLine");
+                    }
+                    updateLines("I used " + toString(project.toolsUsed) + " to work on this project.");
+
+                }
+            }
         }
         else {
             updateLines("invalid command!", "errorOut")

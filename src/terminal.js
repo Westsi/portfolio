@@ -1,15 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 
 
 const Terminal = (props) => {
 	const prompt = "WS C:\\Users\\visitor>";
+	const [input, setInput] = useState("")
+
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+
+	const getInput = async () => {
+		await delay(150);
+		const inp = input;
+		console.log(inp);
+		setInput("");
+		props.onCommand(inp);
+	}
 
 	return (
-		<div className="app">
-			<h1>{prompt}</h1>
-			<button onClick={() => props.onCommand("help")}>help</button>
-			<button onClick={() => props.onCommand("skills")}>skills</button>
-			<button onClick={() => props.onCommand("contact")}>contact</button>
+		<div className="terminalInput">
+			<h5>{prompt}<input type={"text"} value={input} onChange={e => setInput(e.target.value)} onKeyDown={(e) => {
+				if (e.key == "Enter") {
+					getInput();
+				}
+			}} className="inputBox"></input></h5>
 		</div>
 	)
 }

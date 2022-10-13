@@ -6,5 +6,34 @@
 
 
 .output {
-    font-family: 'JetBrains Mono', Courier, monospace;
+    font-family: 'JetBrains Mono', monospace;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 5px;
+}
+
+.errorOut {
+    color: red;
+}
+
+.inputBox {
+    color:yellow;
+    border: none;
+    background-color: black;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+}
+
+.inputBox:focus {
+    outline: none;
+    outline-color: black;
+    caret-color: white;
+}
+
+.skillHeader {
+    color: aqua;
+}
+
+.confidence {
+    color:darkseagreen;
 }

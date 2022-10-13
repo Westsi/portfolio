@@ -13,7 +13,7 @@ const help = [
     },
     {
         command :"skills",
-        description: "The languages, frameworks and tools that I have experience with and my other skills"
+        description: "Languages, tools and frameworks I can use and skills I have"
     }
 ]
 

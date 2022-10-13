@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { help, about, contact, skills, projects } from "./commands";
 import Terminal from "./terminal";
 import "./terminal.css";
@@ -17,53 +17,59 @@ const CommandExecutor = (props) => {
         var lObject = { line: line, className: className };
         lines2.push(lObject);
         setLines(lines2);
-        console.log("lines updated!");
         forceUpdate();
     }
 
     const prompt = "WS C:\\Users\\visitor>";
 
 
+    useEffect(() => {
+        document.title = "WS - Portfolio";
+    }, []);
+
     const runCommand = (command) => {
         const commands = ["help", "about", "contact", "skills", "projects"]
+        updateLines(prompt + command, "promptCom");
         if (commands.includes(command)) {
-            updateLines(prompt + command, "promptCom");
-            if (command == "help") {
+            if (command === "help") {
                 updateLines("command\t\tdescription")
                 for (const com in help) {
-                    updateLines(help[com].command + " \t \t " + help[com].description, "helpRes");
+                    updateLines(help[com].command + "\t \t" + help[com].description, "helpRes");
                 }
             }
 
-            else if (command == "contact") {
+            else if (command === "contact") {
                 for (const obj in contact) {
                     updateLines(contact[obj].text, "contactRes");
                     updateLines(contact[obj].link, "contactLink")
                 }
             }
 
-            else if (command == "skills") {
+            else if (command === "skills") {
                 for (const skill in skills) {
                     console.log(skill);
-                    const Yr_s = "year"
+                    var Yr_s = "year"
                     if (skills[skill].yrsExp != 1) {
                         Yr_s = "years"
                     }
-                    updateLines(skills[skill].text + ": I have " + skills[skill].yrsExp + " " + Yr_s + " of experience with this tool.", "skillHeader");
-                    updateLines("Confidence:", "confidenceHeader");
-                    updateLines((skills[skill].confidence * 10).toString() + "%");
+                    if (skills[skill].yrsExp === "<1") {
+                        Yr_s = "year";
+                    }
+                    updateLines("-" + skills[skill].text + ": " + skills[skill].yrsExp + " " + Yr_s + " of experience.", "skillHeader");
+                    updateLines("- Confidence: " + (skills[skill].confidence * 10).toString() + "%", "confidence");
                 }
 
             }
         }
         else {
-            updateLines("invalid command!")
+            updateLines("invalid command!", "errorOut")
         }
     }
+
     return (
         <>
             <div className="output">
-                {lines.map(line => <h2 className={line.className}>{line.line}</h2>)}
+                {lines.map(line => <h5 className={line.className}>{line.line}</h5>)}
                 <Terminal onCommand={(command) => { runCommand(command) }} />
             </div>
         </>

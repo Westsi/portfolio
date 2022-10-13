@@ -42,7 +42,6 @@ const CommandExecutor = (props) => {
             }
 
             else if (command == "skills") {
-                updateLines(skills[0].text, "test")
                 for (const skill in skills) {
                     console.log(skill);
                     const Yr_s = "year"

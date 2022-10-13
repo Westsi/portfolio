@@ -49,7 +49,7 @@ const CommandExecutor = (props) => {
                     if (skills[skill].yrsExp != 1){
                         Yr_s = "years"
                     }
-                    updateLines(skills[skill].text + ": I have " + skills[skill].yrsExp + " years of experience with this tool.", "skillHeader");
+                    updateLines(skills[skill].text + ": I have " + skills[skill].yrsExp + " " + Yr_s + " of experience with this tool.", "skillHeader");
                     updateLines("Confidence:", "confidenceHeader");
                     updateLines((skills[skill].confidence * 10).toString() + "%");
                 }

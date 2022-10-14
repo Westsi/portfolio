@@ -31,7 +31,7 @@ const CommandExecutor = (props) => {
                     pushLines(line.substring(prevC, i), className);
                 }
                 else {
-                    pushLines("&nbsp;" + line.substring(prevC, i), className);
+                    pushLines(" -" + line.substring(prevC, i), className);
                 }
                 prevC = i;
             }

@@ -26,9 +26,10 @@ const CommandExecutor = (props) => {
         */
         if (line.length > 45){
             var prevC = 0;
-            for (var i = 45; i < (line.length); i += 45)
-            pushLines(line.substring(prevC, i), className)
-            prevC = i;
+            for (var i = 45; i < (line.length); i += 45){
+                pushLines(line.substring(prevC, i), className)
+                prevC = i;
+            }
         }
         else {
             pushLines(line, className)

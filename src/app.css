@@ -12,7 +12,7 @@ body {
     transform: translate(-50%, -50%);
     overflow-y: scroll;
     border-radius: 5px;
-    word-wrap: break-word;
+    word-wrap: normal;
     white-space: nowrap;
 }
 

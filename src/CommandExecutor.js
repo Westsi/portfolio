@@ -21,17 +21,14 @@ const CommandExecutor = (props) => {
 		forceUpdate();
     }
 	const updateLines = (line, className) => {
-        /*
-        BROKEN
-        */
         if (line.length > 45){
             var prevC = 0;
             for (var i = 45; i < (line.length + 45); i += 45){
                 if (prevC == 0){
-                    pushLines(line.substring(prevC, i), className);
+                    pushLines(line.substring(prevC, i) + "-", className);
                 }
                 else {
-                    pushLines(" -" + line.substring(prevC, i), className);
+                    pushLines(line.substring(prevC, i), className);
                 }
                 prevC = i;
             }

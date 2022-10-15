@@ -10,6 +10,7 @@
     padding-top: 0px;
     padding-bottom: 0px;
     line-height: 5px;
+    padding-left: 10px;
 }
 
 .errorOut {
@@ -27,7 +28,7 @@
 .inputBox:focus {
     outline: none;
     outline-color: black;
-    caret-color: white;
+    caret-color: yellow;
 }
 
 .skillHeader {

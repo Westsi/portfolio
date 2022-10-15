@@ -14,6 +14,8 @@ const CommandExecutor = (props) => {
 	const [lines, setLines] = useState([]);
 	const forceUpdate = useForceUpdate();
 
+	const [dirs, setDirs] = useState([]);
+
 
 	const pushLines = (line, className) => {
 		var lines2 = lines;
@@ -45,9 +47,9 @@ const CommandExecutor = (props) => {
 
 
 	useEffect(() => {
-		document.title = "WS - Portfolio";
+		document.title = "WS - Jamie Andersen Portfolio";
 		updateLines("Jamie Andersen presents...", "welcomeLine");
-		updateLines("WestsiShell.", "welcomeLine");
+		updateLines("WestsiShell (my portfolio).", "welcomeLine");
 		updateLines("Type 'help' to begin.", "welcomeLine");
 		updateLines(<Art2 />, "art");
 	}, []);

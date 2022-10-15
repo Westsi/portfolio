@@ -21,7 +21,7 @@
     border: none;
     background-color: black;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .inputBox:focus {
@@ -36,4 +36,20 @@
 
 .confidence {
     color:darkseagreen;
+}
+
+.helpRes {
+    color: aqua;
+}
+
+.helpHeader {
+    color:goldenrod;
+}
+
+.themeChangeHeader {
+    color:darkseagreen;
+}
+
+.themeOpts {
+    color:goldenrod;
 }

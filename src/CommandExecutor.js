@@ -12,6 +12,9 @@ const CommandExecutor = (props) => {
 	const [lines, setLines] = useState([]);
 	const forceUpdate = useForceUpdate();
 
+	const [backgroundColor, setBackgroundColor] = useState("#000000");
+	const [textColor, setTextColor] = useState("#00ff00");
+
 
     const pushLines = (line, className) => {
         var lines2 = lines;
@@ -41,17 +44,41 @@ const CommandExecutor = (props) => {
 
 	const prompt = "WS C:\\Users\\visitor>";
 
+	const themeSet = (themename) => {
+		console.log(themename);
+		if (themename === "dark"){
+			setBackgroundColor("#000000");
+			setTextColor("#00ff00");
+		}
+		else if (themename === "light"){
+			setBackgroundColor("#ffffff");
+			setTextColor("#00ff00");
+		}
+	}
+
 
 	useEffect(() => {
 		document.title = "WS - Portfolio";
 	}, []);
 
 	const runCommand = (command) => {
-		const commands = ["help", "about", "contact", "skills", "projects"]
+		const commands = ["help", "about", "contact", "skills", "projects", "clear", "theme"]
 		updateLines(prompt + command, "promptCom");
 		if (commands.includes(command)) {
+
+			if (command === "clear"){
+				setLines([]);
+			}
+
+			if (command === "theme"){
+				updateLines("Theme changing options!", "themeChangeHeader");
+				updateLines("Theme options:", "themeOpts");
+				updateLines(<button className="themeSelectButton" onClick={() => themeSet("dark")}>Dark</button>);
+				updateLines(<button className="themeSelectButton" onClick={() => themeSet("light")}>Light</button>);
+			}
+
 			if (command === "help") {
-				updateLines("command\t\tdescription")
+				updateLines("command\t\tdescription", "helpHeader");
 				for (const com in help) {
 					updateLines(help[com].command + "\t \t" + help[com].description, "helpRes");
 				}

@@ -16,6 +16,17 @@ body {
     white-space: nowrap;
 }
 
+@media(max-width:1300px) {
+    .App {
+        height: 80%;
+        width: 100%;
+        position: fixed;
+        border-radius: 5px;
+        word-wrap: normal;
+        white-space: nowrap;
+    }
+}
+
 .App::-webkit-scrollbar {
     width: 12px;
 }

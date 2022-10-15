@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { help, about, contact, skills, projects } from "./commands";
 import Terminal from "./terminal";
+
+import Art2 from "./art2";
 import "./terminal.css";
 
 function useForceUpdate() {
@@ -12,69 +14,58 @@ const CommandExecutor = (props) => {
 	const [lines, setLines] = useState([]);
 	const forceUpdate = useForceUpdate();
 
-	const [backgroundColor, setBackgroundColor] = useState("#000000");
-	const [textColor, setTextColor] = useState("#00ff00");
 
-
-    const pushLines = (line, className) => {
-        var lines2 = lines;
+	const pushLines = (line, className) => {
+		var lines2 = lines;
 		var lObject = { line: line, className: className };
 		lines2.push(lObject);
 		setLines(lines2);
 		forceUpdate();
-    }
+	}
 	const updateLines = (line, className) => {
-        if (line.length > 45){
-            var prevC = 0;
-            for (var i = 45; i < (line.length + 45); i += 45){
-                if (prevC == 0){
-                    pushLines(line.substring(prevC, i) + "-", className);
-                }
-                else {
-                    pushLines(line.substring(prevC, i), className);
-                }
-                prevC = i;
-            }
-        }
-        else {
-            pushLines(line, className)
-        }
-		
+		if (line.length > 45) {
+			var prevC = 0;
+			for (var i = 45; i < (line.length + 45); i += 45) {
+				if (prevC == 0) {
+					pushLines(line.substring(prevC, i) + "-", className);
+				}
+				else {
+					pushLines(line.substring(prevC, i), className);
+				}
+				prevC = i;
+			}
+		}
+		else {
+			pushLines(line, className)
+		}
+
 	}
 
 	const prompt = "WS C:\\Users\\visitor>";
 
-	const themeSet = (themename) => {
-		console.log(themename);
-		if (themename === "dark"){
-			setBackgroundColor("#000000");
-			setTextColor("#00ff00");
-		}
-		else if (themename === "light"){
-			setBackgroundColor("#ffffff");
-			setTextColor("#00ff00");
-		}
-	}
-
 
 	useEffect(() => {
 		document.title = "WS - Portfolio";
+		updateLines("Jamie Andersen presents...", "welcomeLine");
+		updateLines("WestsiShell.", "welcomeLine");
+		updateLines("Type 'help' to begin.", "welcomeLine");
+		updateLines(<Art2 />, "art");
 	}, []);
 
 	const runCommand = (command) => {
-		const commands = ["help", "about", "contact", "skills", "projects", "clear", "theme"]
+		const commands = ["help", "about", "contact", "skills", "projects", "clear", "welcome"]
 		updateLines(prompt + command, "promptCom");
 		if (commands.includes(command)) {
 
-			if (command === "clear"){
+			if (command === "clear") {
 				setLines([]);
 			}
 
-			if (command === "theme"){
-				updateLines("Theme changing options!", "themeChangeHeader");
-				updateLines("Theme options:", "themeOpts");
-				updateLines(<button className="themeSelectButton" onClick={() => themeSet("dark")}>Dark</button>);
-				updateLines(<button className="themeSelectButton" onClick={() => themeSet("light")}>Light</button>);
+			if (command === "welcome") {
+				updateLines("Jamie Andersen presents...", "welcomeLine");
+				updateLines("WestsiShell.", "welcomeLine");
+				updateLines("Type 'help' to begin.", "welcomeLine");
+				updateLines(<Art2 />, "art");
 			}
 
 			if (command === "help") {

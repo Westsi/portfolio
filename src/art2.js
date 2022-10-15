@@ -1,5 +1,4 @@
 import React from 'react';
-import "./art.css";
 
 const Art2 = () => {
     return (

@@ -13,7 +13,11 @@ const help = [
     },
     {
         command :"skills",
-        description: "Languages, tools and frameworks I can use and skills I have"
+        description: "My languages, tools and frameworks"
+    },
+    {
+        command: "welcome",
+        description: "Reprint the welcome message"
     }
 ]
 

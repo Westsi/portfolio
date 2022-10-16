@@ -55,7 +55,7 @@ const CommandExecutor = (props) => {
 	}, []);
 
 	const runCommand = (command) => {
-		const commands = ["help", "about", "contact", "skills", "projects", "clear", "welcome"]
+		const commands = ["help", "about", "contact", "skills", "projects", "clear", "welcome", "mkdir"]
 		updateLines(prompt + command, "promptCom");
 		if (commands.includes(command)) {
 

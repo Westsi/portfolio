@@ -57,6 +57,7 @@ const projects = [
     {name: <a href="https://github.com/westsi/thynkr" target="_blank" rel="noreferrer">Thynkr</a>, writtenIn: ["Frontend - Javascript with React.", "Backend - Python with Flask, SQL-Alchemy and Marshmallow."], toolsUsed: ["JS", "Flask", "Flask-RESTful", "Postman", "Python", "VSCode", "Git", "Pycharm", "(Flask) SQL-Alchemy", "(Flask) Marshmallow", "React", "CRA"], description: "A learning platform (half-finished, first react project)"},
     {name: <a href="https://github.com/westsi/aeterna" target="_blank" rel="noreferrer">Aeterna</a>, writtenIn: ["Frontend - Javascript with React.", "Backend - Golang with GORM and Gin-Gonic."], toolsUsed: ["JS", "Golang", "Gin-Gonic", "Postman", "GORM", "VSCode", "Git", "React", "CRA"], description: "A youtube clone (WIP)"},
     {name: <a href="https://github.com/shopyo/shopcube" target="_blank" rel="noreferrer">Shopcube</a>, writtenIn: ["Python with Flask and SQL-Alchemy"], toolsUsed: ["Python", "SQL-Alchemy", "Shopyo", "pre-commit", "Git", "VSCode", "Flask", "jinja2"], description: "My first open-source project I contributed to!"},
+    {name: <a href="https://github.com/westsi/autovid" target="_blank" rel="noreferrer">AutoVid</a>, writtenIn: ["Python with Moviepy"], toolsUsed: ["Python", "venv", "moviepy", "Git", "VSCode"], description: "A project that automatically makes Youtube videos from a script"},
 ]
 
 

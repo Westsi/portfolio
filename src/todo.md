@@ -1,2 +1,3 @@
-Add more projects
-fix line wrap for small screen devices
+Completely overhaul w/ Svelte
+- new UI
+- new concept

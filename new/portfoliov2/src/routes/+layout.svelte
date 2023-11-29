@@ -18,7 +18,7 @@
 		/* place-items: center;
         text-align: center; */
 		width: 100%;
-        background-color: #1f1f1f;
+        background-image:	linear-gradient(#1a1a1a, #242424);
 		/* border-bottom: 1px solid rgba(255, 255, 255, 0.87); */
 	}
 	.logo {

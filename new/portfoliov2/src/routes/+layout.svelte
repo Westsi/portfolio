@@ -5,10 +5,10 @@
 </script>
 
 <nav>
-	<a href="/" rel="noreferrer">
+	<a href="#splash" rel="noreferrer">
 		<img src={Logo} class="logo" alt="Logo" />
 	</a>
-	<a href="/projects" rel="noreferrer" class="navlink projects" title="Projects"><h3>Projects</h3></a>
+	<a href="#projects" rel="noreferrer" class="navlink" title="Projects"><h3>Projects</h3></a>
 </nav>
 <slot />
 

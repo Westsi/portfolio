@@ -2,6 +2,10 @@
     import Project from "$lib/components/Project.svelte";
     import { onMount } from "svelte";
     import { browser } from '$app/environment';
+    import Logo from '$lib/logo.png';
+    import GHLogo from '$lib/gh-logo.png';
+
+    const skills_data = ["Python", "Go", "Java", "HTML/CSS/JS", "C", "Java", "Svelte", "Git", "Vite", "SQLite", "Docker", "Flask", "Git", "Postman"]
 
     // check if element is in viewport
     function isInViewport(el) {
@@ -15,12 +19,15 @@
     }
 
     // on scroll, check if element is in viewport, and if so add class name to bg
-    onMount(() => {
+    onMount(async () => {
         if (browser) {
             window.addEventListener('scroll', () => {
                 const bg = document.querySelector('.bg');
                 if (isInViewport(document.getElementById('splash'))) {
                     bg.classList = 'bg splash';
+                }
+                if (isInViewport(document.getElementById('about'))) {
+                    bg.classList = 'bg about';
                 }
                 if (isInViewport(document.getElementById('skills'))) {
                     bg.classList = 'bg skills';
@@ -30,7 +37,8 @@
                 }
             })
         }
-    })
+    });
+
 </script>
 <main>
     <div class="bg">
@@ -39,22 +47,45 @@
                 <p class="splash-tagline">Creating and programming</p>
                 <p class="splash-title">Software and Hardware</p>
             </div>
+            <div class="splash-lottie-container">
+                <dotlottie-player src={"/anims/computer.lottie"} background="transparent" speed="1" style="width: 600px; height: 600px;" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+
+        <div class="sect about" id="about">
+            <h1 class="sect-title">About</h1>
+            <div class="about-container">
+                <img src={Logo} class="logo" alt="Logo" />
+                <div class="text-container">
+                    <p class="about-text">Software and Hardware Engineer and Full Stack Developer, with an interest in OS and Language Development.</p>
+                    <p class="links"><a href="https://github.com/Westsi" target="_blank" rel="noreferrer"><img class="gh-link"src={GHLogo} alt="GitHub Logo" /></a></p>
+                </div>
+            </div>
         </div>
         
         <div class="sect skills" id="skills">
-            <h1>Languages and Frameworks</h1>
-            <div class="skills-container">
-                <div class="skill">
-                    <p>Python</p>
+            <h1 class="sect-title">Skills</h1>
+            <div class="skills-icons-container">
+                <div class="skill-icon">
+                    <dotlottie-player class="skill-icon-lottie" src={"/anims/server.lottie"} background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <p class="skill-title">Backend Development</p>
                 </div>
-                <div class="skill">
-                    <p>JavaScript</p>
+                <div class="skill-icon">
+                    <dotlottie-player class="skill-icon-lottie" src={"/anims/cpu.lottie"} background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <p class="skill-title">Low Level and Hardware</p>
                 </div>
-                <div class="skill">
-                    <p>C++</p>
+                <div class="skill-icon">
+                    <dotlottie-player class="skill-icon-lottie" src={"/anims/web-dev.lottie"} background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <p class="skill-title">Front-End Development</p>
                 </div>
             </div>
-            <h1>Tools</h1>
+            <p class="tools-title">Languages, Frameworks, and Tools</p>
+            <div class="tools-grid-container">
+                {#each skills_data as skill}
+                    <b><div class="skill">{skill}</div></b>
+                {/each}
+            </div>
+
         </div>
         
         <div class="sect projects" id="projects">
@@ -74,9 +105,88 @@
 
 <style>
 
+    .about-text {
+        font-size: 1.5rem;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 100px;
+        align-items: center;
+        padding-left: 3rem;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .gh-link {
+        width: 50px;
+        filter: drop-shadow(0 0 1em #00d9ff);
+    }
+
     .sect {
         scroll-margin-top: 50px;
+        border-top: 2px solid rgb(77, 77, 77);
     }
+
+    .skills-icons-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .skill-icon-lottie {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #00d9ff;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 1em #00d9ff);
+    }
+
+    .skill-title {
+        font-weight: 900;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    .splash-lottie-container {
+        top: 50%;
+        position:absolute;
+        left: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .tools-grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #242424;
+        filter: drop-shadow(-20px -15px 1em #7d12ff7f);
+    }
+    .tools-title {
+        font-weight: 900;
+        font-size: 32px;
+    }
+
+    .skill {
+        padding: 0.5rem;
+        color: #2e2e2e;
+        margin: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.87);
+        border-radius: 24px;
+        width: 100px;
+        height: 24px;
+        text-align: center;
+    }
+
     div {
         padding: 2rem;
     }

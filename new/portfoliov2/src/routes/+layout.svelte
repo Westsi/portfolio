@@ -14,6 +14,7 @@
 	<a href="#splash" rel="noreferrer" on:click|preventDefault={() => scrollClickHandler('splash')}>
 		<img src={Logo} class="logo" alt="Logo" />
 	</a>
+	<a href="#about" on:click|preventDefault={() => scrollClickHandler('about')} class="navlink" title="About"><h3>About</h3></a>
 	<a href="#skills" on:click|preventDefault={() => scrollClickHandler('skills')} class="navlink" title="Skills"><h3>Skills</h3></a>
 	<a href="#projects" on:click|preventDefault={() => scrollClickHandler('projects')} class="navlink" title="Projects"><h3>Projects</h3></a>
 </nav>

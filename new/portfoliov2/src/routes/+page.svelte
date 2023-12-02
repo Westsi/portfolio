@@ -34,14 +34,14 @@
 </script>
 <main>
     <div class="bg">
-        <div class="splash" id="splash">
+        <div class="sect splash" id="splash">
             <div class="splash-text-container">
                 <p class="splash-tagline">Creating and programming</p>
                 <p class="splash-title">Software and Hardware</p>
             </div>
         </div>
         
-        <div class="skills" id="skills">
+        <div class="sect skills" id="skills">
             <h1>Languages and Frameworks</h1>
             <div class="skills-container">
                 <div class="skill">
@@ -57,7 +57,7 @@
             <h1>Tools</h1>
         </div>
         
-        <div class="projects" id="projects">
+        <div class="sect projects" id="projects">
             <h1>Projects</h1>
             <Project name="Project 1" description="Project 1 description" ghurl="https://github.com"/>
             <Project name="Project 2" description="Project 2 description" ghurl="https://github.com"/>
@@ -73,6 +73,10 @@
 
 
 <style>
+
+    .sect {
+        scroll-margin-top: 50px;
+    }
     div {
         padding: 2rem;
     }

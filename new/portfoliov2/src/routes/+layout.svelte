@@ -2,19 +2,28 @@
     import Logo from '$lib/logo.png';
 	import { navigating } from '$app/stores';
 	import { onMount } from 'svelte';
+
+	let scrollClickHandler = (id) => {
+		const element = document.getElementById(id);
+		console.log(element.offsetTop);
+		element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // works but goes to center of element instead of top
+	}
 </script>
 
 <nav>
-	<a href="#splash" rel="noreferrer">
+	<a href="#splash" rel="noreferrer" on:click|preventDefault={() => scrollClickHandler('splash')}>
 		<img src={Logo} class="logo" alt="Logo" />
 	</a>
-	<a href="#projects" rel="noreferrer" class="navlink" title="Projects"><h3>Projects</h3></a>
+	<a href="#skills" on:click|preventDefault={() => scrollClickHandler('skills')} class="navlink" title="Skills"><h3>Skills</h3></a>
+	<a href="#projects" on:click|preventDefault={() => scrollClickHandler('projects')} class="navlink" title="Projects"><h3>Projects</h3></a>
 </nav>
 <slot />
 
 <style>
 	nav {
 		display: flex;
+		position: fixed;
+		z-index: 1;
 		/* place-items: center;
         text-align: center; */
 		width: 100%;

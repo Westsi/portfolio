@@ -4,9 +4,9 @@
     import { browser } from '$app/environment';
     import Logo from '$lib/logo.png';
     import GHLogo from '$lib/gh-logo.png';
+    import Projects from "$lib/data/projects.json";
 
     const skills_data = ["Python", "Go", "Java", "HTML/CSS/JS", "C", "Java", "Svelte", "Git", "Vite", "SQLite", "Docker", "Flask", "Git", "Postman"]
-
     // check if element is in viewport
     function isInViewport(el) {
         const rect = el.getBoundingClientRect();
@@ -46,6 +46,7 @@
             <div class="splash-text-container">
                 <p class="splash-tagline">Creating and programming</p>
                 <p class="splash-title">Software and Hardware</p>
+                <p class="splash-tagline">Full-Stack Developer, Engineer</p>
             </div>
             <div class="splash-lottie-container">
                 <dotlottie-player src={"/anims/computer.lottie"} background="transparent" speed="1" style="width: 600px; height: 600px;" loop autoplay></dotlottie-player>
@@ -85,25 +86,39 @@
                     <b><div class="skill">{skill}</div></b>
                 {/each}
             </div>
-
         </div>
         
         <div class="sect projects" id="projects">
             <h1>Projects</h1>
-            <Project name="Project 1" description="Project 1 description" ghurl="https://github.com"/>
-            <Project name="Project 2" description="Project 2 description" ghurl="https://github.com"/>
-            <Project name="Project 3" description="Project 3 description" ghurl="https://github.com"/>
-            <Project name="Project 4" description="Project 4 description" ghurl="https://github.com"/>
-            <Project name="Project 5" description="Project 5 description" ghurl="https://github.com"/>
-            <Project name="Project 6" description="Project 6 description" ghurl="https://github.com"/>
-            <Project name="Project 7" description="Project 7 description" ghurl="https://github.com"/>
-            <Project name="Project 8" description="Project 8 description" ghurl="https://github.com"/>
+            <div class="projects-container">
+                {#each Projects.projects as project}
+                    <Project name={project.name} description={project.description} ghurl={project.ghurl}/>
+                {/each}
+            </div>
         </div>
+
+        <div class="sect footer">
+            <p class="footer-text">© Jamie Andersen 2023</p>
+            <p class="footer-text">Built with Svelte and Lottie (<a href="https://github.com/Westsi/portfolio" target="_blank" rel="noreferrer">View on GitHub</a>)</p>
+            <p class="footer-text">Version 1.0</p>
+        </div>
+
     </div>
 </main>
 
 
 <style>
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
     .about-text {
         font-size: 1.5rem;
@@ -201,12 +216,16 @@
         background-color: #242424;
     }
 
+    :global(.bg.about) {
+        background-color: #282828;
+    }
+
     :global(.bg.skills) {
-        background-color: #2e2e2e;
+        background-color: #2a2a2a;
     }
 
     :global(.bg.projects) {
-        background-color: #383838;
+        background-color: #2e2e2e;
     }
 
     .splash-text-container {
@@ -224,6 +243,7 @@
         color: #00d9ff;
         font-size: 5rem;
         line-height: 1;
+        margin-bottom: 10px;
     }
 
     .splash-tagline {

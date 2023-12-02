@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "name": "Ether",
+            "description": "A web server written in C with only standard libraries. Designed to be fast, extensible, and easy to use.",
+            "ghurl": "https://github.com/Westsi/Ether"
+        }, 
+        {
+            "name": "CommandLineTools",
+            "description": "A set of command line tools that I have written to help my workflow. Includes Github Actions and tests.",
+            "ghurl": "https://github.com/Westsi/CommandLineTools"
+        },
+        {
+            "name": "Autovid",
+            "description": "A program to automatically generate videos from scripts and images.",
+            "ghurl": "https://github.com/Westsi/Autovid"
+        },
+        {
+            "name": "SpectraOS",
+            "description": "An operating system designed for smart glasses running on x86.",
+            "ghurl": "https://github.com/xonize/SpectraOSNG"
+        }
+    ]
+}

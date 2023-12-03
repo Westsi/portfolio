@@ -1,4 +1,4 @@
 Completely overhaul w/ Svelte
-- new UI
-- new concept
-- make sure it works on pages
+- [x] new UI
+- [x] new concept
+- [x] make sure it works on pages

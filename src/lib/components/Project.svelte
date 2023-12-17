@@ -36,7 +36,7 @@
     }
     .project-description {
         font-size: 1rem;
-        width: 50%;
+        width: 80%;
         height: 110px;
     }
     .gh-link {

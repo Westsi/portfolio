@@ -19,6 +19,11 @@
             "name": "SpectraOS",
             "description": "An operating system designed for smart glasses running on x86.",
             "ghurl": "https://github.com/xonize/SpectraOSNG"
+        },
+        {
+            "name": "Icosa",
+            "description": "A web browser written in Java with Swing.",
+            "ghurl": "https://github.com/Westsi/Icosa"
         }
     ]
 }

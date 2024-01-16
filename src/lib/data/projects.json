@@ -1,9 +1,9 @@
 {
     "projects": [
         {
-            "name": "Ether",
+            "name": "Quintessence",
             "description": "A web server written in C with only standard libraries. Designed to be fast, extensible, and easy to use.",
-            "ghurl": "https://github.com/Westsi/Ether"
+            "ghurl": "https://github.com/Westsi/quintessence"
         }, 
         {
             "name": "CommandLineTools",

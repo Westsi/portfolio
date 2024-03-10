@@ -6,7 +6,7 @@
     import GHLogo from '$lib/gh-logo.png';
     import Projects from "$lib/data/projects.json";
 
-    const skills_data = ["Python", "Go", "Java", "HTML/CSS/JS", "C", "Java", "Svelte", "Git", "Vite", "SQLite", "Docker", "Flask", "Git", "Postman"]
+    const skills_data = ["Python", "Go", "Java", "HTML/CSS/JS", "C", "Java", "Svelte", "Git", "Vite", "SQLite", "Docker", "Flask", "Postman", "ESP-IDF", "KiCad", "Platform-IO", "Fusion360"]
     // check if element is in viewport
     function isInViewport(el) {
         const rect = el.getBoundingClientRect();
@@ -58,7 +58,7 @@
             <div class="about-container">
                 <img src={Logo} class="logo" alt="Logo" />
                 <div class="text-container">
-                    <p class="about-text">Software and Hardware Engineer and Full Stack Developer, with an interest in OS and Language Development.</p>
+                    <p class="about-text">Software and Hardware Engineer and Full Stack Developer, with an interest in OS, IoT and embedded development.</p>
                     <p class="links"><a href="https://github.com/Westsi" target="_blank" rel="noreferrer"><img class="gh-link"src={GHLogo} alt="GitHub Logo" /></a></p>
                 </div>
             </div>
@@ -98,7 +98,7 @@
         </div>
 
         <div class="sect footer">
-            <p class="footer-text">© Jamie Andersen 2023</p>
+            <p class="footer-text">© Jamie Andersen 2023-2024</p>
             <p class="footer-text">Built with Svelte and Lottie (<a href="https://github.com/Westsi/portfolio" target="_blank" rel="noreferrer">View on GitHub</a>)</p>
             <p class="footer-text">Version 1.0</p>
         </div>
@@ -116,7 +116,9 @@
 
     .projects-container {
         display: flex;
-        flex-direction: row;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
     }
 
@@ -171,12 +173,96 @@
         text-align: center;
     }
 
+    .splash-text-container {
+        padding: 3rem;
+        padding-left: 10rem;
+        width: 30%; /* TODO: make this mobile compatible*/
+        top: 50%;
+        position:absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .splash-title {
+        margin-top: 10px;
+        color: #00d9ff;
+        font-size: 5rem;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    .splash-tagline {
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    .splash {
+        /* background-image: linear-gradient(#242424, #262626, #282828, #2a2a2a, #2c2c2c, #2e2e2e); */
+        height: 100vh;
+    }
+
     .splash-lottie-container {
         top: 50%;
         position:absolute;
         left: 50%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+    }
+
+
+    @media (max-width: 1300px) {
+        .splash-lottie-container {
+            display: none;
+        }
+        .logo {
+            display: none;
+        }
+    }
+    @media (max-width: 900px) {
+        .skills-icons-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    @media (max-width: 750px) {
+        .splash-text-container {
+            padding: 3rem;
+            padding-left: 3rem;
+            width: 70%; /* TODO: make this mobile compatible*/
+            top: 40%;
+            position:absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .splash-lottie-container {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 72%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .splash-title {
+            font-size: 3rem;
+        }
+
+        .splash-tagline {
+            font-size: 1.5rem;
+        }
+    }
+    @media (max-width: 700px) {
+        .projects-container {
+            display: flex;
+            flex-direction:column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .tools-grid-container {
@@ -227,37 +313,6 @@
     :global(.bg.projects) {
         background-color: #2e2e2e;
     }
-
-    .splash-text-container {
-        padding: 3rem;
-        padding-left: 10rem;
-        width: 30%; /* TODO: make this mobile compatible*/
-        top: 50%;
-        position:absolute;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-
-    .splash-title {
-        margin-top: 10px;
-        color: #00d9ff;
-        font-size: 5rem;
-        line-height: 1;
-        margin-bottom: 10px;
-    }
-
-    .splash-tagline {
-        margin-bottom: 10px;
-        color: #ffffff;
-        font-size: 2.5rem;
-        line-height: 1;
-    }
-
-    .splash {
-        /* background-image: linear-gradient(#242424, #262626, #282828, #2a2a2a, #2c2c2c, #2e2e2e); */
-        height: 100vh;
-    }
-
     /* .skills {
         background-image: linear-gradient(#2e2e2e, #303030, #323232, #343434, #363636, #383838);
     }

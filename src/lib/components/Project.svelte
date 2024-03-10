@@ -25,6 +25,11 @@
         display: flex;
     }
 
+    @media (max-width: 960px) {
+        .project {
+            width: 90%;
+        }
+    }
     .project-lottie-container {
         width: 400px;
         position: relative;

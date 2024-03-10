@@ -100,7 +100,7 @@
         <div class="sect footer">
             <p class="footer-text">© Jamie Andersen 2023-2024</p>
             <p class="footer-text">Built with Svelte and Lottie (<a href="https://github.com/Westsi/portfolio" target="_blank" rel="noreferrer">View on GitHub</a>)</p>
-            <p class="footer-text">Version 1.0</p>
+            <p class="footer-text">Version 1.2</p>
         </div>
 
     </div>

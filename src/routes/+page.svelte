@@ -49,7 +49,7 @@
                 <p class="splash-tagline">Full-Stack Developer, Engineer</p>
             </div>
             <div class="splash-lottie-container">
-                <dotlottie-player src={"/anims/computer.lottie"} background="transparent" speed="1" style="width: 600px; height: 600px;" loop autoplay></dotlottie-player>
+                <dotlottie-player src={"/anims/computer.lottie"} background="transparent" speed="1" class="splash-lottie-player" loop autoplay></dotlottie-player>
             </div>
         </div>
 
@@ -211,6 +211,10 @@
         transform: translateY(-50%);
     }
 
+    .splash-lottie-player {
+        width: 600px; 
+        height: 600px;
+    }
 
     @media (max-width: 1300px) {
         .splash-lottie-container {
@@ -246,6 +250,10 @@
             top: 72%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+        }
+
+        .splash-lottie-player {
+            width: 100vw;
         }
         .splash-title {
             font-size: 3rem;

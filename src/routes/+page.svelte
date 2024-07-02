@@ -6,7 +6,7 @@
     import GHLogo from '$lib/gh-logo.png';
     import Projects from "$lib/data/projects.json";
 
-    const skills_data = ["Python", "Go", "Java", "HTML/CSS/JS", "C", "Java", "Svelte", "Git", "Vite", "SQLite", "Docker", "Flask", "Postman", "ESP-IDF", "KiCad", "Platform-IO", "Fusion360"]
+    const skills_data = ["Python", "Go", "Java", "HTML/CSS/JS", "C", "Svelte", "Git", "Vite", "SQLite", "Docker", "Flask", "Postman", "ESP-IDF", "KiCad", "Platform-IO", "Fusion360"]
     // check if element is in viewport
     function isInViewport(el) {
         const rect = el.getBoundingClientRect();

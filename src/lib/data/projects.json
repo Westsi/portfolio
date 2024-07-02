@@ -7,7 +7,7 @@
         }, 
         {
             "name": "CommandLineTools",
-            "description": "A set of command line tools that I have written to help my workflow. Includes Github Actions and tests.",
+            "description": "A set of command line tools that I have written to help my workflow.",
             "ghurl": "https://github.com/Westsi/CommandLineTools"
         },
         {
@@ -24,6 +24,11 @@
             "name": "Icosa",
             "description": "A web browser written in Java with Swing.",
             "ghurl": "https://github.com/Westsi/Icosa"
+        },
+        {
+            "name": "Dormouse",
+            "description": "A programming language targeting x86 and arm, written in Go, with a full test and CI suite.",
+            "ghurl": "https://github.com/Westsi/dormouse"
         }
     ]
 }

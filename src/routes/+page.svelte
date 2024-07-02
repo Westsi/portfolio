@@ -58,7 +58,7 @@
             <div class="about-container">
                 <img src={Logo} class="logo" alt="Logo" />
                 <div class="text-container">
-                    <p class="about-text">Software and Hardware Engineer and Full Stack Developer, with an interest in OS, IoT and embedded development.</p>
+                    <p class="about-text">Software and Hardware Engineer and Full Stack Developer, with an interest in OS, programming languages, and embedded development.</p>
                     <p class="links"><a href="https://github.com/Westsi" target="_blank" rel="noreferrer"><img class="gh-link"src={GHLogo} alt="GitHub Logo" /></a></p>
                 </div>
             </div>

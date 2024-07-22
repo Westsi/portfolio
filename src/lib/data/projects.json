@@ -21,9 +21,9 @@
             "ghurl": "https://github.com/xonize/SpectraOSNG"
         },
         {
-            "name": "Icosa",
-            "description": "A web browser written in Java with Swing.",
-            "ghurl": "https://github.com/Westsi/Icosa"
+            "name": "ESP Smartwatch",
+            "description": "A smartwatch with modern features, made with an ESP32, coded in C/C++.",
+            "ghurl": "https://github.com/Westsi/ESP-Smartwatch"
         },
         {
             "name": "Dormouse",

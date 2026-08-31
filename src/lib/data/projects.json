@@ -6,21 +6,6 @@
             "ghurl": "https://github.com/Westsi/quintessence"
         }, 
         {
-            "name": "CommandLineTools",
-            "description": "A set of command line tools that I have written to help my workflow.",
-            "ghurl": "https://github.com/Westsi/CommandLineTools"
-        },
-        {
-            "name": "Autovid",
-            "description": "A program to automatically generate videos from scripts and images.",
-            "ghurl": "https://github.com/Westsi/Autovid"
-        },
-        {
-            "name": "SpectraOS",
-            "description": "An operating system designed for smart glasses running on x86.",
-            "ghurl": "https://github.com/xonize/SpectraOSNG"
-        },
-        {
             "name": "ESP Smartwatch",
             "description": "A smartwatch with modern features, made with an ESP32, coded in C/C++.",
             "ghurl": "https://github.com/Westsi/ESP-Smartwatch"

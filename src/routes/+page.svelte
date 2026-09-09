@@ -46,7 +46,7 @@
             <div class="splash-text-container">
                 <p class="splash-tagline">Creating and programming</p>
                 <p class="splash-title">Software and Hardware</p>
-                <p class="splash-tagline">Full-Stack Developer, Engineer</p>
+                <p class="splash-tagline">Full-Stack Developer, Engineering Student</p>
             </div>
             <div class="splash-lottie-container">
                 <dotlottie-player src={"/anims/computer.lottie"} background="transparent" speed="1" class="splash-lottie-player" loop autoplay></dotlottie-player>
@@ -58,7 +58,7 @@
             <div class="about-container">
                 <img src={Logo} class="logo" alt="Logo" />
                 <div class="text-container">
-                    <p class="about-text">Software and Hardware Engineer and Full Stack Developer, with an interest in OS, programming languages, and embedded development.</p>
+                    <p class="about-text">Engineering Student and Full Stack Developer, with an interest in OS, programming languages, and embedded development.</p>
                     <p class="links"><a href="https://github.com/Westsi" target="_blank" rel="noreferrer"><img class="gh-link"src={GHLogo} alt="GitHub Logo" /></a></p>
                 </div>
             </div>
